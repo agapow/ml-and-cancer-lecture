@@ -7,7 +7,7 @@ PANDOC_EXE=pandoc
 
 # input presentation
 SRC_FORMAT=md
-PREZ_ROOT=presentation
+PREZ_ROOT=ml-and-cancer
 SRC_PREZ=$(PREZ_ROOT).$(SRC_FORMAT)
 
 # output dir

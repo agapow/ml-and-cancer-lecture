@@ -16,41 +16,30 @@ date: 2018/11/14
 * "computer systems that automatically improve with experience"
 * "using statistical techniques to give computer systems the ability to learn"
 * "neural networks"
-* something to do with AI and Big Data ...
-
-
-# What is Machine Learning (& AI & Big Data ...)?
-
-
-:::::::::::::: {.columns}
-::: {.column width="40%"}
-
-
-
-
-Necessary vocabulary blurred by:
-
-* indistinct terms
-* hype & marketing
-* sloppy language
-* technological progress
-* new names for old concepts
-
-:::
-::: {.column width="40%"}
-
-![WikiMedia Commons](images/ai-hype.jpg)
-
-:::
-::::::::::::::
 
 
 ::: notes
 
-* Terms once seemed to be clear, in practice anyway
-* Now blurred
-* Some never strictly defined
-* Some have an operational or functional definition now superseded by progress
+* These are actual quotes
+
+:::
+
+
+# What is Machine Learning (& AI & Big Data ...)?
+
+![WikiMedia Commons](images/ai-hype.jpg)
+
+There's a huge amount of vague terms, ambguity and hype.
+
+
+::: notes
+
+* Necessary vocabulary blurred by:
+  * indistinct terms
+  * hype & marketing
+  * sloppy language
+  * technological progress
+  * new names for old concepts
 * Let's give you an intuitive feels for terms
 
 :::
@@ -60,15 +49,13 @@ Necessary vocabulary blurred by:
 
 Data *too extreme* to be handled by current approaches.
 
-Extreme in what way?
-
 * Velocity
 * Volume
 * Variety
 * ... Veracity
 * ... ... Value
 
-Practically, any large rich dataset.
+In practice, any large rich dataset.
 
 
 ::: notes
@@ -98,7 +85,7 @@ In practice:
 * ~~deep learning~~
 * more of an objective than a methodology
 * computational systems that duplicates / emulates / replaces human effort
-* usually involving applied statistical optmization or machine learning
+* usually involving applied statistical optimization or machine learning
 
 ![Ray Kurweil *The Singularity is Near*](images/only-humans.png)
 
@@ -114,14 +101,8 @@ In practice:
 
 # What is Machine Learning?
 
-:::::::::::::: {.columns}
-::: {.column width="40%"}
-contents...
-:::
-::: {.column width="60%"}
-contents...
-:::
-::::::::::::::
+![A spectrum](images/stats-vs-ml.png)
+
 
 ::: notes
 
@@ -158,38 +139,6 @@ contents...
 :::
 
 
-# What is Machine Learning?
-
-* **Train** a **model** from data
-* The model in some way encapsulates or **generalizes** the data
-* This model transforms **features** into **labels**
-  - Continuous outputs (e.g. real numbers) are **regressions**
-  - Discrete outputs (e.g. categories) are **classifications**
-* Arguably 'non-parametric'
-
-
-::: notes
-
-* Another way to look at ML is what it does
-* Some regard regressions and other traditional methods as ML
-* ML has it's own language
-  - train: learn from
-  - features: input data, covariates
-  - weights: parameters
-  - labels: output data, dependent variables
-
-:::
-
-
-# Machine learning: practical example
-
-
-![Korou et al.](images/ml-in-cancer-prognosis-paper.jpg)
-
-* Cancer is disease of many subtypes
-* Vital to classify cases & forecast path
-
-
 # Why now?
 
 ML has come of age due to:
@@ -200,14 +149,175 @@ ML has come of age due to:
 * Need 'good enough' solutions
 
 
-# Going to sleep
+# ML methods
 
-Two of the most widely adopted machine learning methods are supervised learning and unsupervised learning – but there are also other methods of machine learning. Here's an overview of the most popular types.
+* Many methods
+* Broadly split into:
+  - Unsupervised: finds structure within data
+    - e.g. (most) clustering, self-organised maps, principal component analysis
+  - Supervised: trained using labelled examples
+    - e.g. regression, decision trees, naive bayes, neural networks
+* Categories can blur
+  - e.g. k-means, nearest neighbour?
+* Which is better?
 
-Supervised learning algorithms are trained using labeled examples, such as an input where the desired output is known. For example, a piece of equipment could have data points labeled either “F” (failed) or “R” (runs). The learning algorithm receives a set of inputs along with the corresponding correct outputs, and the algorithm learns by comparing its actual output with correct outputs to find errors. It then modifies the model accordingly. Through methods like classification, regression, prediction and gradient boosting, supervised learning uses patterns to predict the values of the label on additional unlabeled data. Supervised learning is commonly used in applications where historical data predicts likely future events. For example, it can anticipate when credit card transactions are likely to be fraudulent or which insurance customer is likely to file a claim.
 
-Unsupervised learning is used against data that has no historical labels. The system is not told the "right answer." The algorithm must figure out what is being shown. The goal is to explore the data and find some structure within. Unsupervised learning works well on transactional data. For example, it can identify segments of customers with similar attributes who can then be treated similarly in marketing campaigns. Or it can find the main attributes that separate customer segments from each other. Popular techniques include self-organizing maps, nearest-neighbor mapping, k-means clustering and singular value decomposition. These algorithms are also used to segment text topics, recommend items and identify data outliers.
+::: notes
 
-Semisupervised learning is used for the same applications as supervised learning. But it uses both labeled and unlabeled data for training – typically a small amount of labeled data with a large amount of unlabeled data (because unlabeled data is less expensive and takes less effort to acquire). This type of learning can be used with methods such as classification, regression and prediction. Semisupervised learning is useful when the cost associated with labeling is too high to allow for a fully labeled training process. Early examples of this include identifying a person's face on a web cam.
+* Some regard regressions and other traditional methods as ML
 
-Reinforcement learning is often used for robotics, gaming and navigation. With reinforcement learning, the algorithm discovers through trial and error which actions yield the greatest rewards. This type of learning has three primary components: the agent (the learner or decision maker), the environment (everything the agent interacts with) and actions (what the agent can do). The objective is for the agent to choose actions that maximize the expected reward over a given amount of time. The agent will reach the goal much faster by following a good policy. So the goal in reinforcement learning is to learn the best policy.
+:::
+
+
+
+# ML terms
+
+* (**Train** a **model** from data)
+* The model encapsulates or **generalizes** the data
+* This model transforms **features** into **labels**
+  - Continuous outputs (e.g. real numbers) are **regressions**
+  - Discrete outputs (e.g. categories) are **classifications**
+* Arguably 'non-parametric'
+
+
+::: notes
+
+* ML has it's own language
+  - train: learn from
+  - features: input data, covariates
+  - weights: parameters
+  - labels: output data, dependent variables
+
+:::
+
+
+
+# Machine learning: practical example
+
+![Korou et al.](images/ml-in-cancer-prognosis-paper.png)
+
+
+::: notes
+
+* Cancer is disease of many subtypes
+* Vital to classify cases & forecast path
+* Use clinical variables & transcriptomics to train a model
+* Training data labels (& model output):
+  - cancer susceptibility
+  - recurrence
+  - survival
+
+:::
+
+
+# Unsupervised learning: clustering
+
+![Wiki Commons](images/different-clusters.png)
+
+A foundational issues for biology, but a lot more complicated than it seems.
+
+
+::: notes
+
+* A common, almost necessary task
+* But surprisingly difficult:
+  - Many algorithms
+    - Disagreements on concepts (e.g. similarity)
+  - Different things can cluster in different ways
+  - Real data is noisy
+  - What cluster "shapes" are possible
+  - When do you stop splitting data
+  - Can find clusters in random data
+* Need to normalize data
+
+:::
+
+
+
+# Clustering validation
+
+How do we assess cluster results? Validate:
+
+* External: compare against external label or data
+  - e.g. accuracy, entropy
+* Internal: goodness of clustering
+  - e.g. sum squared errors, cluster cohesion & seperation, silhouette
+* Relative: against another clustering scheme
+
+
+::: notes
+
+:::
+
+
+# Silhouette analysis
+
+For each point:
+
+1. Calculate the average distance to all other members of its cluster, *a*
+2. For each other cluster, calculate the average distance to every member. The minimum of these is *b*
+3. The silhouette width is *(b−a) / max(a,b)*
+
+Look at distribution or average this.
+
+
+
+::: notes
+
+:::
+
+
+
+# Problem: Useless solutions
+
+![Ribeiro et al. (2016) *Why Should I Trust You?*](images/husky-vs-wolf.png)
+
+The model is right but learns the wrong thing (from our point of view)
+
+
+::: notes
+
+* a.k.a.
+  - gaming the specification
+  - "overfitting" (eh)
+  - "(implicit) bias (in training data)"  (eh)
+* Examples:
+  - Pictures of melanoma fix on histological ruler
+  - Classifying latin music sub-genres fix on BPM
+  - Grading CVs inherits misogyny of humans
+  - army used ML to distinguish between camouflaged tanks and plain forest, bu the pictures of tanks were taken on cloudy day and the forest on sunny days
+* Solutions:
+  - Think about training data, hard
+  - Broad validation
+  - Interpretability
+
+:::
+
+
+# Problem: interpretability
+
+* Reversing the model & asking "why"
+* What features are important
+  - Mechanistic insight
+* But many ML models are tangled & horribly complex
+* And ML community often uninterested
+* Solutions:
+  - Choose an intepretable model
+  - Software that explores feature space (LIME, Lift, IML)
+
+
+# Problem: how good do models have to be?
+
+![After Harel](images/super-harel.png)
+
+What do we want from our ML models?
+
+
+::: notes
+
+
+
+:::
+
+
+ # Problem: imbalanced data
